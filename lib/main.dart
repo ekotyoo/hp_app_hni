@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hp_app_hni/app_binding.dart';
 import 'package:hp_app_hni/routes/app_routes.dart';
+import 'package:hp_app_hni/theme/app_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       initialBinding: AppBinding(),
       initialRoute: AppRoutes.initial,
       getPages: AppRoutes.routes,
+      theme: AppTheme.lightTheme,
     );
   }
 }
