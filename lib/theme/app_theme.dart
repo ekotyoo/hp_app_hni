@@ -35,6 +35,7 @@ class AppTheme {
           bodySmall: kTypoCaption1,
           labelLarge: kTypoBodyBold.copyWith(letterSpacing: .2),
           labelSmall: kTypoCaption2,
+          titleMedium: kTypoTitleBold,
         ),
         appBarTheme: AppBarTheme(
           backgroundColor: kColorNeutral0,
@@ -61,6 +62,34 @@ class AppTheme {
           iconColor: kColorNeutral900,
           dense: true,
           horizontalTitleGap: 16,
+        ),
+        cardTheme: const CardTheme(
+          color: kColorPrimary10,
+          shadowColor: kColorPrimary200,
+        ),
+        inputDecorationTheme: InputDecorationTheme(
+          labelStyle: kTypoBody,
+          hintStyle: kTypoBody.copyWith(color: kColorNeutral100),
+          fillColor: kColorPrimary50,
+          filled: true,
+          border: InputBorder.none,
+          constraints: const BoxConstraints(maxHeight: 56),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide: BorderSide.none,
+          ),
+          disabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide: BorderSide.none,
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide: const BorderSide(
+              color: kColorPrimary100,
+              width: 2,
+              strokeAlign: BorderSide.strokeAlignInside,
+            ),
+          ),
         ),
       );
 }

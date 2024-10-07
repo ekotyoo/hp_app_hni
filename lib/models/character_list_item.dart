@@ -9,6 +9,7 @@ class CharacterListItem with _$CharacterListItem {
   factory CharacterListItem({
     required String id,
     required String name,
+    required String house,
     String? image,
   }) = _CharacterListItem;
 

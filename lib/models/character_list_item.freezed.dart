@@ -22,6 +22,7 @@ CharacterListItem _$CharacterListItemFromJson(Map<String, dynamic> json) {
 mixin _$CharacterListItem {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
+  String get house => throw _privateConstructorUsedError;
   String? get image => throw _privateConstructorUsedError;
 
   /// Serializes this CharacterListItem to a JSON map.
@@ -40,7 +41,7 @@ abstract class $CharacterListItemCopyWith<$Res> {
           CharacterListItem value, $Res Function(CharacterListItem) then) =
       _$CharacterListItemCopyWithImpl<$Res, CharacterListItem>;
   @useResult
-  $Res call({String id, String name, String? image});
+  $Res call({String id, String name, String house, String? image});
 }
 
 /// @nodoc
@@ -60,6 +61,7 @@ class _$CharacterListItemCopyWithImpl<$Res, $Val extends CharacterListItem>
   $Res call({
     Object? id = null,
     Object? name = null,
+    Object? house = null,
     Object? image = freezed,
   }) {
     return _then(_value.copyWith(
@@ -70,6 +72,10 @@ class _$CharacterListItemCopyWithImpl<$Res, $Val extends CharacterListItem>
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      house: null == house
+          ? _value.house
+          : house // ignore: cast_nullable_to_non_nullable
               as String,
       image: freezed == image
           ? _value.image
@@ -87,7 +93,7 @@ abstract class _$$CharacterListItemImplCopyWith<$Res>
       __$$CharacterListItemImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String id, String name, String? image});
+  $Res call({String id, String name, String house, String? image});
 }
 
 /// @nodoc
@@ -105,6 +111,7 @@ class __$$CharacterListItemImplCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? name = null,
+    Object? house = null,
     Object? image = freezed,
   }) {
     return _then(_$CharacterListItemImpl(
@@ -115,6 +122,10 @@ class __$$CharacterListItemImplCopyWithImpl<$Res>
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      house: null == house
+          ? _value.house
+          : house // ignore: cast_nullable_to_non_nullable
               as String,
       image: freezed == image
           ? _value.image
@@ -127,7 +138,8 @@ class __$$CharacterListItemImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$CharacterListItemImpl implements _CharacterListItem {
-  _$CharacterListItemImpl({required this.id, required this.name, this.image});
+  _$CharacterListItemImpl(
+      {required this.id, required this.name, required this.house, this.image});
 
   factory _$CharacterListItemImpl.fromJson(Map<String, dynamic> json) =>
       _$$CharacterListItemImplFromJson(json);
@@ -137,11 +149,13 @@ class _$CharacterListItemImpl implements _CharacterListItem {
   @override
   final String name;
   @override
+  final String house;
+  @override
   final String? image;
 
   @override
   String toString() {
-    return 'CharacterListItem(id: $id, name: $name, image: $image)';
+    return 'CharacterListItem(id: $id, name: $name, house: $house, image: $image)';
   }
 
   @override
@@ -151,12 +165,13 @@ class _$CharacterListItemImpl implements _CharacterListItem {
             other is _$CharacterListItemImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
+            (identical(other.house, house) || other.house == house) &&
             (identical(other.image, image) || other.image == image));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, name, image);
+  int get hashCode => Object.hash(runtimeType, id, name, house, image);
 
   /// Create a copy of CharacterListItem
   /// with the given fields replaced by the non-null parameter values.
@@ -179,6 +194,7 @@ abstract class _CharacterListItem implements CharacterListItem {
   factory _CharacterListItem(
       {required final String id,
       required final String name,
+      required final String house,
       final String? image}) = _$CharacterListItemImpl;
 
   factory _CharacterListItem.fromJson(Map<String, dynamic> json) =
@@ -188,6 +204,8 @@ abstract class _CharacterListItem implements CharacterListItem {
   String get id;
   @override
   String get name;
+  @override
+  String get house;
   @override
   String? get image;
 

@@ -9,7 +9,6 @@ class ApiService {
     _dio = Dio(
       BaseOptions(
         baseUrl: baseUrl,
-        contentType: Headers.formUrlEncodedContentType,
       ),
     );
   }

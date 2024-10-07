@@ -12,13 +12,11 @@ class AppRoutes {
       name: '/home',
       page: () => const HomeScreen(),
       binding: HomeScreenBinding(),
-      children: [
-        GetPage(
-          name: '/detail',
-          page: () => const DetailScreen(),
-          binding: DetailScreenBinding(),
-        ),
-      ],
+    ),
+    GetPage(
+      name: '/detail',
+      page: () => const DetailScreen(),
+      binding: DetailScreenBinding(),
     ),
   ];
 }
