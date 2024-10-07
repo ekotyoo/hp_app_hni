@@ -41,21 +41,24 @@ class HomeScreen extends GetView<HomeScreenController> {
                   if (controller.loading.value) {
                     return const Center(child: CircularProgressIndicator());
                   }
-                  return CharacterList(
-                    characters: controller.characters
-                        .where(
-                          (char) {
-                            if (controller.selectedFilter.value == HPFilter.all) {
-                              return true;
-                            }
-                            return char.house.toLowerCase() ==
-                                controller.selectedFilter.value.name;
-                          },
-                        )
-                        .where(
-                          (char) => char.name.toLowerCase().contains(controller.query.value.toLowerCase()),
-                        )
-                        .toList(),
+                  return RefreshIndicator(
+                    onRefresh: controller.loadCharacters,
+                    child: CharacterList(
+                      characters: controller.characters
+                          .where(
+                            (char) {
+                              if (controller.selectedFilter.value == HPFilter.all) {
+                                return true;
+                              }
+                              return char.house.toLowerCase() ==
+                                  controller.selectedFilter.value.name;
+                            },
+                          )
+                          .where(
+                            (char) => char.name.toLowerCase().contains(controller.query.value.toLowerCase()),
+                          )
+                          .toList(),
+                    ),
                   );
                 },
               ),

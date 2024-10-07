@@ -17,11 +17,17 @@ class HomeScreenController extends GetxController {
 
   @override
   void onInit() async {
+    loadCharacters();
+    super.onInit();
+  }
+
+  Future<void> loadCharacters() async {
     loading.value = true;
     final result = await repository.getCharacters();
     switch (result) {
       case Success<List<CharacterListItem>, Exception>():
         characters.value = result.value;
+        characters.refresh();
       case Failure<List<CharacterListItem>, Exception>():
         Get.snackbar(
           'Error',
@@ -31,7 +37,6 @@ class HomeScreenController extends GetxController {
     }
     loading.value = false;
     update();
-    super.onInit();
   }
 
   void setFilter(HPFilter filter) {
