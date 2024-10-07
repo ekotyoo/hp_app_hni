@@ -14,7 +14,7 @@ class AppRoutes {
       binding: HomeScreenBinding(),
     ),
     GetPage(
-      name: '/detail',
+      name: '/detail/:id',
       page: () => const DetailScreen(),
       binding: DetailScreenBinding(),
     ),

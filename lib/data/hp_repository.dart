@@ -14,7 +14,7 @@ class HpRepository extends IHpRepository {
     try {
       final response =
           await apiService.request('/character/$id', DioHttpMethod.get);
-      final character = Character.fromJson(response.data);
+      final character = Character.fromJson((response.data as List<dynamic>).first);
 
       return Success(character);
     } on Exception catch (_) {

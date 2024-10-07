@@ -22,7 +22,7 @@ class CharacterList extends StatelessWidget {
         key: ValueKey(characters[index].id),
         character: characters[index],
         onClick: () {
-          Get.toNamed('/detail');
+          Get.toNamed('/detail/${characters[index].id}');
         },
       ),
     );
