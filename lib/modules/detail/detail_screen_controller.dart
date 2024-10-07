@@ -1,7 +1,6 @@
 import 'package:get/get.dart';
-import 'package:hp_app_hni/data/i_hp_repository.dart';
-import 'package:hp_app_hni/models/character.dart';
-
+import '../../data/i_hp_repository.dart';
+import '../../models/character.dart';
 import '../../models/result.dart';
 import '../../theme/colors.dart';
 

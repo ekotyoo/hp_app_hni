@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
-import 'package:hp_app_hni/modules/detail/detail_screen.dart';
-import 'package:hp_app_hni/modules/detail/detail_screen_binding.dart';
-import 'package:hp_app_hni/modules/home/home_screen.dart';
-import 'package:hp_app_hni/modules/home/home_screen_binding.dart';
+import '../modules/detail/detail_screen.dart';
+import '../modules/detail/detail_screen_binding.dart';
+import '../modules/home/home_screen.dart';
+import '../modules/home/home_screen_binding.dart';
 
 class AppRoutes {
   static const initial = '/home';

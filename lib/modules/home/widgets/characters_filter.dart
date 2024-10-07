@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hp_app_hni/modules/home/widgets/select_chip.dart';
-import 'package:hp_app_hni/utils/string_extenstion.dart';
+import 'select_chip.dart';
+import '../../../utils/string_extenstion.dart';
 
 enum HPFilter { all, gryffindor, hufflepuff, ravenclaw, slytherin}
 

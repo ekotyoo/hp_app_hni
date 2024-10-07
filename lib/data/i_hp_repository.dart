@@ -1,6 +1,6 @@
-import 'package:hp_app_hni/models/character.dart';
-import 'package:hp_app_hni/models/character_list_item.dart';
-import 'package:hp_app_hni/models/result.dart';
+import '../models/character.dart';
+import '../models/character_list_item.dart';
+import '../models/result.dart';
 
 abstract class IHpRepository {
   Future<Result<List<CharacterListItem>, Exception>> getCharacters();

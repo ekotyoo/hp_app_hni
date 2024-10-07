@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hp_app_hni/modules/home/home_screen_controller.dart';
-import 'package:hp_app_hni/modules/home/widgets/character_list.dart';
-import 'package:hp_app_hni/modules/home/widgets/characters_filter.dart';
+import 'home_screen_controller.dart';
+import 'widgets/character_list.dart';
+import 'widgets/characters_filter.dart';
 
 class HomeScreen extends GetView<HomeScreenController> {
   const HomeScreen({super.key});

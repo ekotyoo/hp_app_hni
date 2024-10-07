@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hp_app_hni/models/character_list_item.dart';
-import 'package:hp_app_hni/modules/home/widgets/character_card.dart';
+import '../../../models/character_list_item.dart';
+import 'character_card.dart';
 
 class CharacterList extends StatelessWidget {
   const CharacterList({super.key, required this.characters});

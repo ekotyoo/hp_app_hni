@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hp_app_hni/models/character_list_item.dart';
-import 'package:hp_app_hni/theme/colors.dart';
+import '../../../models/character_list_item.dart';
 
 class CharacterCard extends StatelessWidget {
   const CharacterCard({super.key, required this.character, this.onClick});
